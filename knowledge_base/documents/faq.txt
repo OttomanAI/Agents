@@ -1,0 +1,26 @@
+Frequently Asked Questions
+
+Q: How do I reset my password?
+A: Click "Forgot Password" on the login page. You will receive an email with a reset
+   link that is valid for 1 hour.
+
+Q: Can I upgrade my plan at any time?
+A: Yes. Go to Settings > Billing > Change Plan. The price difference is prorated for
+   the remainder of your current billing cycle.
+
+Q: Is there a free trial?
+A: Yes, all new accounts receive a 14-day free trial of the Business plan with full
+   access to all features. No credit card is required to start.
+
+Q: How do I export my data?
+A: Navigate to Settings > Data Management > Export. You can export your data in CSV,
+   JSON, or PDF format. Exports are available for 7 days after generation.
+
+Q: Does Acme Corp offer an API?
+A: Yes. The Acme API is available on the Business and Enterprise plans. Documentation
+   is available at https://docs.acmecorp.example.com/api. Rate limits depend on your
+   plan tier.
+
+Q: What integrations are supported?
+A: Acme products integrate with Slack, Google Workspace, Microsoft 365, Jira, GitHub,
+   and Zapier. Enterprise customers can request custom integrations.

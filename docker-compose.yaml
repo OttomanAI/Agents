@@ -1,0 +1,38 @@
+services:
+  # --- Interactive CLI agent ---
+  agent:
+    build: .
+    container_name: rag-agent
+    stdin_open: true
+    tty: true
+    env_file:
+      - .env
+    volumes:
+      - ./config.yaml:/app/config.yaml:ro
+      - ./knowledge_base:/app/knowledge_base:ro
+      - chroma_data:/app/chroma_db
+
+  # --- Jupyter notebook for manual testing ---
+  notebook:
+    build: .
+    container_name: rag-notebook
+    command: >
+      jupyter notebook
+        --ip=0.0.0.0
+        --port=8888
+        --no-browser
+        --allow-root
+        --NotebookApp.token=''
+        --NotebookApp.password=''
+    ports:
+      - "8888:8888"
+    env_file:
+      - .env
+    volumes:
+      - ./config.yaml:/app/config.yaml:ro
+      - ./knowledge_base:/app/knowledge_base:ro
+      - ./notebooks:/app/notebooks
+      - chroma_data:/app/chroma_db
+
+volumes:
+  chroma_data:
