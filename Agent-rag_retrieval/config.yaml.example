@@ -1,0 +1,16 @@
+# Copy this file to config.yaml and fill in your values.
+# Environment variables take priority over this file.
+
+openai_api_key: "sk-your-api-key-here"
+openai_model: "gpt-4o"
+embedding_model: "text-embedding-3-small"
+
+# Path to the directory containing knowledge base documents (.txt, .md files)
+knowledge_base_path: "knowledge_base/documents"
+
+# System message that defines the agent's persona and behavior
+system_message: |
+  You are a helpful AI assistant with access to a knowledge base.
+  When answering questions, use the provided context from the knowledge base
+  to give accurate, grounded responses. If the context does not contain
+  relevant information, say so clearly rather than guessing.
