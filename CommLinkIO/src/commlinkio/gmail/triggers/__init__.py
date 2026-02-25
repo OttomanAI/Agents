@@ -1,1 +1,0 @@
-"""Executable Gmail triggers."""
