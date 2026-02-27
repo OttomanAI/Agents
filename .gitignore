@@ -13,5 +13,3 @@ __pycache__/
 .env.*
 credentials.json
 token.json
-.env
-.env.*
