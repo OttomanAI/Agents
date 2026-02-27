@@ -1,0 +1,20 @@
+Company Overview - Acme Corp
+
+Acme Corp was founded in 2020 and specializes in providing cloud-based productivity
+tools for small and medium businesses. The company is headquartered in Austin, Texas,
+and has a remote-first workforce of approximately 150 employees.
+
+Products and Services:
+- Acme Workspace: A collaborative document editing platform with real-time co-authoring.
+- Acme Tasks: A project management tool with Kanban boards, Gantt charts, and time tracking.
+- Acme Connect: A team messaging and video conferencing solution.
+
+All products are available on a subscription basis with three tiers:
+  Starter  - $9/user/month  (up to 10 users)
+  Business - $19/user/month (up to 100 users, priority support)
+  Enterprise - custom pricing (unlimited users, dedicated account manager, SLA)
+
+Support:
+Customers can reach support via email at support@acmecorp.example.com or through the
+in-app chat widget available Monday-Friday 9am-6pm CST. Enterprise customers receive
+24/7 support with a guaranteed 1-hour response time.
