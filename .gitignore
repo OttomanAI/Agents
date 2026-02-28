@@ -4,6 +4,7 @@
 # Python
 __pycache__/
 *.py[cod]
+*.egg-info/
 
 # Jupyter
 .ipynb_checkpoints/
