@@ -4,8 +4,8 @@ from __future__ import annotations
 
 from typing import Any, TYPE_CHECKING
 
-from Agents.config import Config
-from Agents.knowledge_base import KnowledgeBase
+from agents.config import Config
+from agents.knowledge_base import KnowledgeBase
 
 if TYPE_CHECKING:  # pragma: no cover
     from openai import OpenAI

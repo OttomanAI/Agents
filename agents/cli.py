@@ -8,9 +8,9 @@ import sys
 
 from openai import OpenAI
 
-from Agents.config import Config
-from Agents.knowledge_base import KnowledgeBase
-from Agents.rag_agent import RAGAgent
+from agents.config import Config
+from agents.knowledge_base import KnowledgeBase
+from agents.rag_agent import RAGAgent
 
 logger = logging.getLogger(__name__)
 
