@@ -17,4 +17,4 @@ dependencies = [
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["agents*", "comms*", "agent_tools*"]
+include = ["comms*", "agent_tools*"]
