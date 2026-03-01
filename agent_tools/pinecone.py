@@ -61,3 +61,64 @@ def get_index(
         )
 
     return pc.Index(index_name)
+
+
+def query_chunks(
+    index: Index,
+    prompt: str,
+    model: EmbeddingModel | str = EmbeddingModel.SMALL,
+    namespace: str = "",
+    top_k: int = 3,
+    include_metadata: bool = True,
+) -> list[dict]:
+    """Embed a prompt and return the closest matching chunks from Pinecone.
+
+    Parameters
+    ----------
+    index:
+        A Pinecone index handle (from ``get_index``).
+    prompt:
+        The user's question to embed and search for.
+    model:
+        OpenAI embedding model to use.
+    namespace:
+        Pinecone namespace to query.
+    top_k:
+        Number of results to return.
+    include_metadata:
+        Whether to include stored metadata in results.
+
+    Returns
+    -------
+    list[dict]
+        Each dict has ``text``, ``score``, and ``id``.
+        If *include_metadata* is True, the full ``metadata`` dict is also included.
+    """
+    from openai import OpenAI
+
+    client = OpenAI()
+    embedding = client.embeddings.create(
+        input=prompt,
+        model=EmbeddingModel(model).value,
+    )
+    vector = embedding.data[0].embedding
+
+    results = index.query(
+        vector=vector,
+        top_k=top_k,
+        namespace=namespace,
+        include_metadata=include_metadata,
+    )
+
+    chunks = []
+    for match in results.matches:
+        entry = {
+            "id": match.id,
+            "score": match.score,
+            "text": match.metadata.get("text", "") if match.metadata else "",
+        }
+        if include_metadata and match.metadata:
+            entry["metadata"] = match.metadata
+        chunks.append(entry)
+
+    return chunks
