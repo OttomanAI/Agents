@@ -1,0 +1,12 @@
+User prompt
+    │
+    ├──→ OpenAI Embeddings API  →  vector
+    │                                 │
+    │                                 ▼
+    │                            Pinecone query  →  matched text chunks
+    │                                                      │
+    ▼                                                      ▼
+OpenAI Chat API  ◄──  system.txt  +  prompt  +  retrieved chunks  +  memory.json
+    │                                                                     ▲
+    ▼                                                                     │
+  Answer ──→ simple_memory.save(role, content)  →  memory.json (last N entries)
