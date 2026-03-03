@@ -1,0 +1,16 @@
+[project]
+name = "jaded-rose-bot"
+version = "1.0.0"
+description = "RAG-powered Telegram chatbot for Jaded Rose customer service."
+requires-python = ">=3.11"
+dependencies = [
+  "OttomanAgentAssets[pinecone] @ git+https://github.com/OttomanAI/AgentAssets.git",
+  "python-dotenv>=1.0",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]

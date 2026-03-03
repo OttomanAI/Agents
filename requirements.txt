@@ -1,0 +1,2 @@
+OttomanAgentAssets[pinecone] @ git+https://github.com/OttomanAI/AgentAssets.git
+python-dotenv
