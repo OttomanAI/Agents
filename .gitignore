@@ -31,3 +31,6 @@ build/
 .mypy_cache/
 .coverage
 htmlcov/
+
+# Cloned external repos
+OLMo-core/
