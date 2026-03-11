@@ -7,6 +7,9 @@ application startup.
 
 from __future__ import annotations
 
+from dotenv import load_dotenv
+load_dotenv()
+
 import asyncio
 from contextlib import asynccontextmanager
 from typing import AsyncGenerator
